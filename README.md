@@ -2,8 +2,9 @@
 
 Experiment with use of rust libstd `RandomState` for seeding PRNGs.
 
-Concurrently contributed as tokio-rs/tokio#1324 by the same author, under the
-MIT license.
+Concurrently contributed as
+[tokio-rs/tokio#1324](https://github.com/tokio-rs/tokio/pull/1324)
+by the same author, under the MIT license.
 
 ## License
 
