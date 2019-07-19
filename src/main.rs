@@ -5,8 +5,11 @@ use std::hash::{BuildHasher, Hash, Hasher};
 use lazy_static::lazy_static;
 
 fn main() {
-    println!("zero seed out: {}", sample(0));
-    println!("one  seed out: {}", sample(1));
+    for s in &[0u32, 1, 2, 3, 0xffff_fffe, 0xffff_ffff] {
+        println!("----------------------------- seed: {:08x}, out: {}",
+                 *s, sample(*s));
+    }
+    println!();
 
     let tid = thread::current().id();
     let ms = sample(prng_seed());
